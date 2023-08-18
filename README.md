@@ -1,35 +1,43 @@
 ---
 title: Create React App
-description: A default Create React App project, utilizing `serve` to serve the built app
+description: A default Create React App project, utilizing `Caddy` to serve the built app
 tags:
-  - node
-  - react
+  - Node
+  - React
+  - Caddy
 ---
 
 # Create React App
 
-This is a [Create React App](https://create-react-app.dev/) starter that uses [serve](https://www.npmjs.com/package/serve).
+This is a [Create React App](https://create-react-app.dev/) starter that uses [Caddy](https://caddyserver.com/).
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/6sjhSn?referralCode=ySCnWl)
 
 ## ✨ Features
 
 - Create React App
-- Serve
+- [Caddy](https://caddyserver.com/)
 
 ## 💁‍♀️ How to use
 
 - Install required dependencies with `npm install`
 - Start the server for development `npm run dev`
 
-    (The original `start` command has been more appropriately renamed to `dev`)
+  (The original `start` command has been more appropriately renamed to `dev`)
 
-## ❓ Why use `serve`
+## ❓ Why use `Caddy` when deploying to Railway?
 
-By default Railway will use the `start` script defined in package.json to run your app, the problem with that for a default create-react-app project is that the start script starts a development server
-not fit to run on railway, for reasons such as:
+Caddy is a powerful, enterprise-ready, open source web server, and therefore Caddy is far better suited to serve websites than Vite is, using Caddy will result in much less memory and cpu usage compared to serving with Vite (much lower running costs too)
 
- - Starts a file watching development server that's resource intensive
- - Has a tendency for ram to get out of hand (>600mb)
- - Doesn't listen on the railway provided PORT variable
- - Not as stable or performant as `serve`
+To see how this is achieved with nixpacks, check out the fully documented nixpacks.toml file in this repository
+
+The configuration for Caddy is called a Caddyfile, and you can edit that file to further suite your needs, by default it comes configured to serve a single page app for Vue 3, and to also gzip the responses
+
+**Relevant Caddy documentation:**
+
+- [The Caddyfile](https://caddyserver.com/docs/caddyfile)
+- [Caddyfile Directives](https://caddyserver.com/docs/caddyfile/directives)
+- [root](https://caddyserver.com/docs/caddyfile/directives/root)
+- [encode](https://caddyserver.com/docs/caddyfile/directives/encode)
+- [file_server](https://caddyserver.com/docs/caddyfile/directives/file_server)
+- [try_files](https://caddyserver.com/docs/caddyfile/directives/try_files)
