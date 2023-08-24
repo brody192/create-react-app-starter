@@ -27,7 +27,7 @@ This is a [Create React App](https://create-react-app.dev/) starter that uses [C
 
 ## ❓ Why use `Caddy` when deploying to Railway?
 
-Caddy is a powerful, enterprise-ready, open source web server, and therefore Caddy is far better suited to serve websites than Vite is, using Caddy will result in much less memory and cpu usage compared to serving with Vite (much lower running costs too)
+Caddy is a powerful, enterprise-ready, open source web server, and therefore Caddy is far better suited to serve websites than react-scripts is, using Caddy will result in much less memory and cpu usage compared to serving with react-scripts (much lower running costs too)
 
 To see how this is achieved with nixpacks, check out the fully documented nixpacks.toml file in this repository
 
