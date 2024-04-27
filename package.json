@@ -1,10 +1,15 @@
 {
-  "name": "create-react-app-starter",
+  "name": "TDEE-revamped",
   "version": "0.1.0",
   "dependencies": {
+    "@babel/preset-typescript": "^7.24.1",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "typescript": "^5.4.5",
     "web-vitals": "^3.5.0"
   },
   "scripts": {
