@@ -14,14 +14,14 @@
 }
 
 # site block, listens on the $PORT environment variable, automatically assigned by railway
-:{$PORT} {
+:{$PORT:3000} {
 	# access logs
 	log {
 		format json # set access log format to json mode
 	}
 
 	# health check for railway
-	respond /health 200
+	rewrite /health /*
 
 	# serve from the 'build' folder (react-scripts builds into the 'build' folder)
 	root * build
